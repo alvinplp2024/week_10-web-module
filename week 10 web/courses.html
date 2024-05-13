@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Courses</title>
+</head>
+<body>
+    <h1>Select Courses</h1>
+    <form method="post" action="/courses">
+        {% for course in courses %}
+        <input type="checkbox" name="course" value="{{ course[0] }}"> {{ course[1] }} - {{ course[2] }}<br>
+        {% endfor %}
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
